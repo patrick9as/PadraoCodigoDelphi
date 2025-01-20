@@ -108,17 +108,12 @@
         </DCCReference>
         <DCCReference Include="src\AppModules\cliente\Project.Modules.Cliente.Entity.pas"/>
         <DCCReference Include="src\AppModules\cliente\Project.Modules.Cliente.Module.pas"/>
-        <DCCReference Include="src\AppModules\cliente\Project.Modules.Cliente.Repository.pas">
-            <Form>ClienteRepository</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
-        <DCCReference Include="src\AppModules\cliente\Project.Modules.Cliente.View.pas">
-            <Form>MainMenuView</Form>
+        <DCCReference Include="src\AppModules\cliente\Project.Modules.Cliente.Menu.View.pas">
+            <Form>ClienteMenuView</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="src\AppModules\Project.Modules.App.Repository.pas">
-            <Form>AppRepository</Form>
+        <DCCReference Include="src\AppModules\Project.Modules.App.DAO.pas">
+            <Form>AppDAO</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
