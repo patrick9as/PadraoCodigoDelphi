@@ -32,12 +32,16 @@ type
     property XML: string read FXML write FXML;
   end;
 
-  TGetAllClienteDTO = class(TInserTClienteDTO)
+  TGetAllClienteDTO = class
   private
     FCodigo: Integer;
+    FNomeFantasia: string;
+    FRazaoSocial: string;
     FDataCriacao: TDateTime;
   public
     property Codigo: Integer read FCodigo write FCodigo;
+    property NomeFantasia: string read FNomeFantasia write FNomeFantasia;
+    property RazaoSocial: string read FRazaoSocial write FRazaoSocial;
     property DataCriacao: TDateTime read FDataCriacao write FDataCriacao;
   end;
 
