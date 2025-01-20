@@ -4,7 +4,7 @@ interface
 
 uses
   System.Generics.Collections,
-  Project.Modules.Cliente.DAO, Project.Modules.Cliente.Entity;
+  Project.Modules.Cliente.Entity;
 
 type
   TClienteController = class
