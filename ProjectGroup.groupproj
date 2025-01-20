@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E282590D-5FA2-47D9-B01B-0CF039C02F80}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PadraoCodigoDelphi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="src\Tests\PadraoCodigoDelphiTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PadraoCodigoDelphi">
+        <MSBuild Projects="PadraoCodigoDelphi.dproj"/>
+    </Target>
+    <Target Name="PadraoCodigoDelphi:Clean">
+        <MSBuild Projects="PadraoCodigoDelphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PadraoCodigoDelphi:Make">
+        <MSBuild Projects="PadraoCodigoDelphi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PadraoCodigoDelphiTests">
+        <MSBuild Projects="src\Tests\PadraoCodigoDelphiTests.dproj"/>
+    </Target>
+    <Target Name="PadraoCodigoDelphiTests:Clean">
+        <MSBuild Projects="src\Tests\PadraoCodigoDelphiTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PadraoCodigoDelphiTests:Make">
+        <MSBuild Projects="src\Tests\PadraoCodigoDelphiTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PadraoCodigoDelphi;PadraoCodigoDelphiTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PadraoCodigoDelphi:Clean;PadraoCodigoDelphiTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PadraoCodigoDelphi:Make;PadraoCodigoDelphiTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
